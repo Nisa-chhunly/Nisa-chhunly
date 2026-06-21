@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>METROMALL-Contatc</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section class="top-bar">
+      <div
+        class="container-fluid px-lg-5 px-3 d-flex justify-content-between bg-success p-2">
+        <span>Welcome to MetroMall - Your Premium Online Supermarket</span>
+
+        <div>
+          <a href="#footer-about">About us</a>
+          <a href="#">|</a>
+          <a href="#">Help</a>
+        </div>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-lg-5 px-3 d-flex align-items-center justify-content-between ms-5">
+
+        <a class="navbar-brand fw-bold fs-3 text-warning mr-2" href="index.html">
+          <i class="fa-solid fa-cart-shopping text-success "></i>
+          MetroMall
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer-about">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-icons">
+
+    <a href="wishlist.html">
+        <i class="fa-regular fa-heart mt-1"></i>
+    </a>
+
+    <a href="cart.html">
+        <i class="fa-solid fa-cart-shopping mt-1"></i>
+    </a>
+    <a href="login.html" id="navbar-user-link">
+    <i class="fa-regular fa-user"></i>
+</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- section for banner -->
+    <section class="hero-banner">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- Left Content -->
+            <div class="col-lg-6">
+
+                <span class="hero-tag">
+                    Fresh & Organic
+                </span>
+
+                <h1>
+                    Fresh Groceries
+                    Delivered To
+                    Your Door
+                </h1>
+
+                <p>
+                    Shop premium quality groceries,
+                    fresh vegetables, fruits, and
+                    daily essentials at unbeatable prices.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="shop.html" class="btn btn-light btn-lg">
+                        Shop Now
+                    </a>
+
+                    <a href="#Deal" class="btn btn-warning btn-lg">
+                        View Deals
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-lg-6 text-center">
+
+                <div class="hero-image-wrapper">
+
+                    <img
+                        src="https://imageio.forbes.com/specials-images/imageserve/836782690/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds"
+                        alt="Groceries"
+                        class="img-fluid hero-image">
+
+                    <div class="discount-badge">
+                        <span>15%</span>
+                        OFF
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!--feature products-->
+   <section class="featured-header">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+            <div>
+
+                <span class="section-tag">
+                    Our Products
+                </span>
+
+                <h2 class="section-title">
+                    Featured Products
+                </h2>
+
+                <p class="section-description">
+                    Discover our most popular items carefully selected
+                    for quality, freshness, and value.
+                </p>
+
+            </div>
+
+            <div>
+                <a href="shop.html" class="btn btn-outline-success">
+                    View All Products
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+            <section class="feature product">
+            <div id="productContainer" class="row g-4 mt-2">
+        <!--product 1-->
+        <div class="col-lg-3 col-md-6 product-item"
+     data-name="Coca-Cola"
+     data-price="10.99"
+     data-category="beverage"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Coca-Cola', '$10.99', 'image/coca_cola.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Coca-Cola', '$10.99', '', 'Coca-Cola is a refreshing carbonated soft drink that is perfect for any occasion.', 'image/coca_cola.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/coca_cola.jpg" alt="Coca-Cola">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beverage</small>
+
+            <h5>Coca-Cola</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$10.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Coca-Cola', '$10.99', 'image/coca_cola.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+        <!--product 2-->
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Nivea Cocoa Body Lotion"
+     data-price="4.99"
+     data-category="beauty"
+     data-rating="4">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Nivea Cocoa Body Lotion', '$4.99', 'image/Nivea.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Nivea Cocoa Body Lotion', '$4.99', '', 'Nivea Cocoa Body Lotion is a rich, non-greasy, fast-absorbing lotion that provides 24-hour hydration for dry to very dry skin. It helps restore the protective skin barrier and is suitable for sensitive skin.', 'image/Nivea.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="https://prod-spinneys-cdn-new.azureedge.net/media/cache/ec/f4/ecf46b26db885c6a569650c568afe90c.jpg" alt="Nivea Cocoa Body Lotion">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beauty & Personal Care</small>
+
+            <h5>Nivea Cocoa Body Lotion</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Nivea Cocoa Body Lotion', '$4.99', 'image/Nivea.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 3-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Chocolate Protein bar(12pcs)"
+     data-price="29.99"
+     data-category="snacks"
+     data-rating="4.2">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Chocolate Protein bar(12pcs)', '$29.99', 'image/protein_bar2.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Chocolate Protein bar(12pcs)', '$29.99', '', 'A delicious and nutritious protein bar to fuel your day.', 'image/protein_bar2.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/protein_bar2.jpg" alt="Protein bar">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Choco-Protein bar(12pcs)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.2)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$29.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Chocolate Protein bar(12pcs)', '$29.99', 'image/protein_bar2.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 4-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Cadbury Milk Chocolate"
+     data-price="2.99"
+     data-category="snacks"
+     data-rating="4.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Cadbury Milk Chocolate', '$2.99', 'image/chocolate.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Cadbury Milk Chocolate', '$2.99', '', 'Cadbury Milk Chocolate is a delicious treat made from cocoa beans. It is perfect for satisfying your sweet tooth.', 'image/chocolate.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/chocolate.jpg" alt="Cadbury Milk Chocolate">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Cadbury Milk Chocolate</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$2.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Cadbury Milk Chocolate', '$2.99', 'image/chocolate.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 5-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Eggs"
+     data-price="3.99"
+     data-category="dairy"
+     data-rating="4.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Eggs', '$3.99', 'image/egg.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Eggs', '$3.99', '', 'Eggs are a nutritious food item rich in protein and essential nutrients.', 'image/egg.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/egg.jpg" alt="Eggs">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Dairy & Eggs</small>
+
+            <h5>Eggs (18 pcs)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$3.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Eggs', '$3.99', 'image/egg.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 6-->
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Mixed veggies"
+     data-price="3.99"
+     data-category="freshfood"
+     data-rating="3.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Mixed veggies', '$3.99', 'image/mix_veggies.png')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Mixed veggies', '$3.99', '', 'Mixed veggies are a healthy and delicious option for your meals.', 'image/mix_veggies.png')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/mix_veggies.png" alt="Mixed veggies">
+        </div>
+
+        <div class="product-content">
+
+            <small>Fruits & Vegetables</small>
+
+            <h5>Mixed veggies</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$3.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Mixed veggies', '$3.99', 'image/mix_veggies.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 7-->
+     
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Beef"
+     data-price="9.99"
+     data-category="meat"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Beef', '$9.99', 'image/beef.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Beef', '$9.99', '', 'Beef is a popular meat option rich in protein and essential nutrients.', 'image/beef.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/beef.jpg" alt="Beef">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Meat & Seafood</small>
+
+            <h5>Beef (1 lb)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Beef', '$9.99', 'image/beef.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 8-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Bodia lotus body Lotion"
+     data-price="7.99"
+     data-category="beauty"
+     data-rating="5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Bodia lotus body Lotion', '$7.99', 'image/Bodia_lotion.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Bodia lotus body Lotion', '$7.99', '', 'Bodia lotus body Lotion is a rich, non-greasy, fast-absorbing lotion that provides 24-hour hydration for dry to very dry skin. It helps restore the protective skin barrier and is suitable for sensitive skin.', 'image/Bodia_lotus.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Bodia_lotion.jpg" alt="Bodia lotus body Lotion">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beauty & Personal Care</small>
+
+            <h5>Bodia lotus body Lotion</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(5.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$7.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Bodia lotus body Lotion', '$7.99', 'image/Bodia_lotion.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+ </div>
+</div>
+  </section>
+  <!-- FLASH SALE COUNTDOWN BANNER -->
+<section class="flash-sale-banner my-5">
+  <div class="container">
+    <div class="row g-0 rounded-5 overflow-hidden shadow-lg">
+      
+      <!-- Left side: Urgent Ticker & Clock -->
+      <div class="col-lg-7 p-5 text-white d-flex flex-column justify-content-center flash-left-side">
+        <div class="d-inline-flex align-items-center gap-2 bg-black bg-opacity-25 px-3 py-1 rounded-pill mb-4 align-self-start border border-white border-opacity-10">
+          <span class="pulse-dot"></span>
+          <small class="fw-bold text-uppercase tracking-wider">Limited Flash Offer</small>
+        </div>
+        
+        <h2 class="display-4 fw-black mb-3 text-white">Big Weekend <br><span class="text-warning">Grocery Rush!</span></h2>
+        <p class="mb-4 opacity-90 max-width-450">
+          Stock your kitchen for less. Get premium organic meats, fresh local produce, and everyday essentials at up to 50% off before the timer hits zero.
+        </p>
+
+        <!-- Countdown Block -->
+        <div class="countdown-wrapper d-flex gap-3 text-center mb-4 ">
+          <div class="countdown-box">
+            <span id="flash-days" class="time-num">02</span>
+            <span class="time-label">Days</span>
+          </div>
+          <div class="countdown-divider">:</div>
+          <div class="countdown-box">
+            <span id="flash-hours" class="time-num">14</span>
+            <span class="time-label">Hrs</span>
+          </div>
+          <div class="countdown-divider">:</div>
+          <div class="countdown-box">
+            <span id="flash-mins" class="time-num">35</span>
+            <span class="time-label">Mins</span>
+          </div>
+          <div class="countdown-divider">:</div>
+          <div class="countdown-box">
+            <span id="flash-secs" class="time-num">59</span>
+            <span class="time-label">Secs</span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <a href="shop.html" class="btn btn-warning btn-lg rounded-pill fw-bold px-4 py-3 shadow border-0 hover-lift">
+            Claim Your Discount <i class="fa-solid fa-bolt ms-2 animate-bounce"></i>
+          </a>
+          <span class="text-white opacity-75 small"><i class="fa-solid fa-truck-fast me-2"></i>Free shipping automatically applied</span>
+        </div>
+      </div>
+
+      <!-- Right side: Visual Teaser Grid -->
+      <div class="col-lg-5 d-none d-lg-block position-relative flash-right-side">
+        <div class="flash-overlay-gradient"></div>
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Fresh Harvest" class="w-100 h-100 object-fit-cover">
+        
+        <!-- Floating Accent Pill -->
+        <div class="position-absolute bottom-0 start-0 m-4 bg-white p-3 rounded-4 shadow-sm d-flex align-items-center gap-3 z-3">
+          <div class="bg-success-light p-2 rounded-3 text-success">
+            <i class="fa-solid fa-percent fs-4"></i>
+          </div>
+          <div>
+            <h6 class="fw-bold m-0 text-dark">Extra 10% Cash Back</h6>
+            <small class="text-muted">On all bank cards today</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--best deals-->
+    <section class="best deal py-5" id="Deal">
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="d-inline-flex align-items-center gap-2 bg-black bg-opacity-25 px-3 py-1 rounded-pill mb-4 align-self-start border border-white border-opacity-10">
+  <!-- Brand New Animated Fire Icon -->
+  <i class="fa-solid fa-fire text-warning fire-icon-animate fs-5"></i>
+  <small class="fw-bold text-uppercase tracking-wider">Limited Flash Offer</small>
+</div>
+            <a href="shop.html" class="btn btn-outline-success">
+                View All Products
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+
+        </div>
+            <div id="productContainer" class="row g-4 mt-2">
+        <!--product 1-->
+       <div class="col-lg-3 col-md-6 product-item"
+     data-name="Jasmine Rice"
+     data-price="6.99"
+     data-category="grain"
+     data-rating="4.2">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Jasmine Rice', '$6.99', 'image/Jasmine_rice.png')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Jasmine Rice', '$6.99', '$8.99', 'Jasmine Rice is a premium quality rice known for its fragrant aroma and fluffy texture. It is perfect for everyday cooking.', 'image/Jasmine_rice.png')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Jasmine_rice.png" alt="Jasmine Rice">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Grains & Rice</small>
+
+            <h5>Jasmine Rice (10kg)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.2)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$6.99</span>
+                <span class="old-price">$8.99</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Jasmine Rice', '$6.99', 'image/Jasmine_rice.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+        <!--product 2-->
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Schoko Snack"
+     data-price="4.50"
+     data-category="snacks"
+     data-rating="3.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Schoko Snack', '$4.50', 'image/schoko_snack.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Schoko Snack', '$4.50', '6.00', 'Delicious chocolate snack for a quick energy boost.', 'image/schoko_snack.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/schoko_snack.jpg" alt="Schoko Snack">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Schoko Snack</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.50</span>
+                <span class="old-price">$6.00</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Schoko Snack', '$4.50', 'image/schoko_snack.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 3-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Banana"
+     data-price="1.99"
+     data-category="freshfood"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Banana', '$1.99', 'image/banana.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Banana', '$1.99', '$3.00', 'Banana is a delicious and nutritious fruit that is rich in potassium and vitamin C.', 'image/banana.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/banana.jpg" alt="Banana">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Fruit & Vegetables</small>
+
+            <h5>Banana</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$1.99</span>
+                <span class="old-price">$3.00</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Banana', '$1.99', 'image/banana.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 4-->
+    <div class="col-lg-3 col-md-6 product-item"
+     data-name="Chicken (5lbs)"
+     data-price="11.99"
+     data-category="meat"
+     data-rating="4.8">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Chicken (5lbs)', '$11.99', 'image/FrozenOrganicChicken-Whole.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Chicken (5lbs)', '$11.99', '', 'Fresh chicken (5lbs) is a great source of protein and essential nutrients.', 'image/FrozenOrganicChicken-Whole.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/FrozenOrganicChicken-Whole.jpg" alt="Chicken (5lbs)">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Meat & Seafood</small>
+
+            <h5>Whole Chicken (5lbs)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.8)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$11.99</span>
+                <span class="old-price">$13.99</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Whole Chicken (5lbs)', '$11.99', 'image/FrozenOrganicChicken-Whole.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<section class="support-section py-5 bg-light">
+    <section class="support-section py-5">
+<div class="container">
+
+    <div class="row text-center">
+
+        <div class="col-md-3">
+            <i class="fa-solid fa-headset"></i>
+            <h5>24/7 Support</h5>
+            <p>Always available to help.</p>
+        </div>
+
+        <div class="col-md-3">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h5>Fast Delivery</h5>
+            <p>Quick and reliable service.</p>
+        </div>
+
+        <div class="col-md-3">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h5>Secure Payment</h5>
+            <p>100% safe transactions.</p>
+        </div>
+
+        <div class="col-md-3">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+            <h5>Easy Returns</h5>
+            <p>Hassle-free return policy.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+</section>
+
+   
+    <!--footer-->
+    <footer class="footer">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-3 col-md-6 mb-4" id="footer-about">
+                <h5>About MetroMall</h5>
+
+                <p>
+                    Your trusted online supermarket offering
+                    fresh groceries, electronics, and household
+                    essentials delivered to your doorstep.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Quick Links</h5>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#footer-about">About Us</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Customer Service</h5>
+
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Contact Us</h5>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    123 Commerce Street, Metro City
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +1 (555) 123-4567
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    support@metromall.com
+                </p>
+
+                <h6 class="mt-4">Newsletter</h6>
+
+                <div class="input-group">
+                    <input type="email"
+                           class="form-control"
+                           placeholder="Your email">
+
+                    <button class="btn btn-success">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 MetroMall. All rights reserved.
+            </p>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+        <div class="modal-content border-0 shadow p-3">
+            <div class="modal-header border-0 justify-content-center position-relative">
+                <h4 class="modal-title fw-bold text-center w-100" id="loginModalLabel">Welcome Back</h4>
+                <button type="button" class="btn-close position-absolute end-0 top-0 mt-2 me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <form id="loginForm">
+                    <div class="mb-3 text-start">
+                        <label class="form-label small fw-bold text-muted">Your Name</label>
+                        <input type="text" id="loginUsername" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-4 text-start">
+                        <label class="form-label small fw-bold text-muted">Password</label>
+                        <input type="password" class="form-control" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 fw-bold py-2">
+                        Sign In <i class="fa-solid fa-right-to-bracket ms-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Product Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid rounded mb-3" alt="Product Image" style="max-height: 250px; object-fit: contain;">
+
+                <div class="price mb-2">
+                    <span id="modalNewPrice" class="new-price text-success fw-bold fs-5"></span>
+                    <span id="modalOldPrice" class="old-price text-muted text-decoration-line-through ms-2"></span>
+                </div>
+
+                <p id="modalDescription" class="text-muted"></p>
+
+                <button class="btn btn-success w-100 mt-3" onclick="addToCart(document.getElementById('modalTitle').textContent, document.getElementById('modalNewPrice').textContent, document.getElementById('modalImage').src)">
+                    <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

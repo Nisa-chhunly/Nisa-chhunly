@@ -1,0 +1,1890 @@
+=<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>METROMALL-Shop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section class="top-bar">
+      <div
+        class="container-fluid px-lg-5 px-3 d-flex justify-content-between bg-success p-2">
+        <span>Welcome to MetroMall - Your Premium Online Supermarket</span>
+
+        <div>
+          <a href="#footer-about">About us</a>
+          <a href="#">|</a>
+          <a href="#">Help</a>
+        </div>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-lg-5 px-3 d-flex align-items-center justify-content-between ms-5">
+
+        <a class="navbar-brand fw-bold fs-3 text-warning mr-2" href="index.html">
+          <i class="fa-solid fa-cart-shopping text-success "></i>
+          MetroMall
+        </a>
+        <form class="d-flex flex-grow-1 m-2">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." />
+
+          <button class="btn btn-success ms-2">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer-about">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-icons">
+
+    <a href="wishlist.html">
+        <i class="fa-regular fa-heart mt-1"></i>
+    </a>
+
+   <a href="cart.html" class="position-relative">
+    <i class="fa-solid fa-cart-shopping mt-1"></i>
+    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem; display: none;">
+        0
+    </span>
+</a>
+<a href="login.html" id="navbar-user-link">
+    <i class="fa-regular fa-user"></i>
+</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <!---Products section-->
+    <section class="products py-5">
+      <div class="container px-lg-5">
+        <div class="container d-flex align-items-center mb-2">
+        <a href="index.html" class="btn btn-outline-secondary btn-sm d-flex align-items-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+        </a>
+        <div style="width: 75px;" class="d-none d-md-block"></div>
+    </div>
+        <h2 id="categoryTitle" class="text-center mb-4"> All Products</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="dropdown me-3 m-2">
+    <button
+        class="btn btn-success dropdown-toggle fw-bold px-3 w-auto mb-1 ms-auto" style="max-width: 200px;"
+        type="button"
+        data-bs-toggle="dropdown">
+
+        <i class="fa-solid fa-grid-2 me-2"></i>
+        Categories
+
+    </button>
+
+    <ul class="dropdown-menu shadow border-0 p-2">
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="all"
+               data-title="All Products">
+                 All Products
+            </a>
+        </li>
+
+        <li><hr class="dropdown-divider"></li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="freshfood"
+               data-title="Fresh Food">
+                Fresh Food
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="grain"
+               data-title="Grains & Rice">
+                 Grains & Rice
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="meat"
+               data-title="Meat & Seafood">
+                 Meat & Seafood
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="dairy"
+               data-title="Dairy & Eggs">
+                 Dairy & Eggs
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="beverage"
+               data-title="Beverages">
+                 Beverages
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="snacks"
+               data-title="Snacks & Sweets">
+                 Snacks & Sweets
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="beauty"
+               data-title="Beauty & Personal Care">
+                 Beauty & Personal Care
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item category-filter"
+               href="#"
+               data-category="household"
+               data-title="Household Essentials">
+                 Household Essentials
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+        <select class="form-select w-auto mb-1 ms-auto" style="max-width: 200px;" id="sortSelect">
+        <option value="featured">Featured</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+        </select>
+    </div>
+        <hr class="mb-5">
+       <div id="productContainer" class="row g-4">
+        <!--product 1-->
+        <div class="col-lg-3 col-md-6 product-item"
+     data-name="Cerave Moisturizing Cream"
+     data-price="3.99"
+     data-category="beauty"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Cerave Moisturizing Cream', '$3.99', 'image/Cerave_moisture.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Cerave Moisturizing Cream', '$3.99', '$4.99', 'Cerave Moisturizing Cream is a rich, non-greasy, fast-absorbing cream that provides 24-hour hydration for dry to very dry skin. It helps restore the protective skin barrier and is suitable for sensitive skin.', 'image/Cerave_moisture.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Cerave_moisture.jpg" alt="Cerave Moisturizing Cream">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beauty & Personal Care</small>
+
+            <h5>Cerave Moisturizing Cream</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$3.99</span>
+                <span class="old-price">$4.99</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Cerave Moisturizing Cream', '$3.99', 'image/Cerave_moisture.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+ </div>
+        <!--product 2-->
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Nivea Cocoa Body Lotion"
+     data-price="4.99"
+     data-category="beauty"
+     data-rating="4">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Nivea Cocoa Body Lotion', '$4.99', 'image/Nivea.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Nivea Cocoa Body Lotion', '$4.99', '', 'Nivea Cocoa Body Lotion is a rich, non-greasy, fast-absorbing lotion that provides 24-hour hydration for dry to very dry skin. It helps restore the protective skin barrier and is suitable for sensitive skin.', 'image/Nivea.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="https://prod-spinneys-cdn-new.azureedge.net/media/cache/ec/f4/ecf46b26db885c6a569650c568afe90c.jpg" alt="Nivea Cocoa Body Lotion">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beauty & Personal Care</small>
+
+            <h5>Nivea Cocoa Body Lotion</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Nivea Cocoa Body Lotion', '$4.99', 'image/Nivea.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 3-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Jasmine Rice"
+     data-price="6.99"
+     data-category="grain"
+     data-rating="4.2">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Jasmine Rice', '$6.99', 'image/Jasmine_rice.png')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Jasmine Rice', '$6.99', '$8.99', 'Jasmine Rice is a premium quality rice known for its fragrant aroma and fluffy texture. It is perfect for everyday cooking.', 'image/Jasmine_rice.png')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Jasmine_rice.png" alt="Jasmine Rice">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Grains & Rice</small>
+
+            <h5>Jasmine Rice (10kg)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.2)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$6.99</span>
+                <span class="old-price">$8.99</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Jasmine Rice', '$6.99', 'image/Jasmine_rice.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 4-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Cadbury Milk Chocolate"
+     data-price="2.99"
+     data-category="snacks"
+     data-rating="4.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Cadbury Milk Chocolate', '$2.99', 'image/chocolate.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Cadbury Milk Chocolate', '$2.99', '', 'Cadbury Milk Chocolate is a delicious treat made from cocoa beans. It is perfect for satisfying your sweet tooth.', 'image/chocolate.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/chocolate.jpg" alt="Cadbury Milk Chocolate">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Cadbury Milk Chocolate</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$2.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Cadbury Milk Chocolate', '$2.99', 'image/chocolate.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 5-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Eggs"
+     data-price="3.99"
+     data-category="dairy"
+     data-rating="4.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Eggs', '$3.99', 'image/egg.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Eggs', '$3.99', '', 'Eggs are a nutritious food item rich in protein and essential nutrients.', 'image/egg.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/egg.jpg" alt="Eggs">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Dairy & Eggs</small>
+
+            <h5>Eggs (18 pcs)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$3.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Eggs', '$3.99', 'image/egg.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 6-->
+     
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Cheetos"
+     data-price="2.50"
+     data-category="snacks"
+     data-rating="3">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Cheetos', '$2.50', 'image/cheetos.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Cheetos', '$2.50', '$3.50', 'Cheetos are a popular snack made from corn and cheese.', 'image/cheetos.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/cheetos.jpg" alt="Cheetos">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Cheetos</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$2.50</span>
+                <span class="old-price">$3.50</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Cheetos', '$2.50', 'image/cheetos.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 7-->
+     
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Beef"
+     data-price="9.99"
+     data-category="meat"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Beef', '$9.99', 'image/beef.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Beef', '$9.99', '', 'Beef is a popular meat option rich in protein and essential nutrients.', 'image/beef.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/beef.jpg" alt="Beef">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Meat & Seafood</small>
+
+            <h5>Beef (1 lb)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Beef', '$9.99', 'image/beef.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 8-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Bodia lotus body Lotion"
+     data-price="7.99"
+     data-category="beauty"
+     data-rating="5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Bodia lotus body Lotion', '$7.99', 'image/Bodia_lotion.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Bodia lotus body Lotion', '$7.99', '', 'Bodia lotus body Lotion is a rich, non-greasy, fast-absorbing lotion that provides 24-hour hydration for dry to very dry skin. It helps restore the protective skin barrier and is suitable for sensitive skin.', 'image/Bodia_lotus.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Bodia_lotion.jpg" alt="Bodia lotus body Lotion">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beauty & Personal Care</small>
+
+            <h5>Bodia lotus body Lotion</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(5.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$7.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Bodia lotus body Lotion', '$7.99', 'image/Bodia_lotion.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 9-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Protein bar"
+     data-price="3.49"
+     data-category="snacks"
+     data-rating="3.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Protein bar', '$3.49', 'image/protein_bar.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Protein bar', '$3.49', '', 'A delicious and nutritious protein bar packed with essential nutrients to fuel your day.', 'image/protein_bar.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/protein_bar.jpg" alt="Protein bar">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Protein bar</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$3.49</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Protein bar', '$3.49', 'image/protein_bar.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 10-->
+
+     <div class="col-lg-3 col-md-6 product-item"
+     data-name="Salmon"
+     data-price="9.99"
+     data-category="meat"
+     data-rating="4.0">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Salmon', '$9.99', 'image/salmon.png')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Salmon', '$9.99', '', 'Fresh and delicious salmon, perfect for a healthy meal.', 'image/salmon.png')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/salmon.png" alt="Salmon">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Meat & Seafood</small>
+
+            <h5>Salmon (500g)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Salmon', '$9.99', 'image/salmon.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 11-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Mixed veggies"
+     data-price="3.99"
+     data-category="freshfood"
+     data-rating="3.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Mixed veggies', '$3.99', 'image/mix_veggies.png')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Mixed veggies', '$3.99', '', 'Mixed veggies are a healthy and delicious option for your meals.', 'image/mix_veggies.png')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/mix_veggies.png" alt="Mixed veggies">
+        </div>
+
+        <div class="product-content">
+
+            <small>Fruits & Vegetables</small>
+
+            <h5>Mixed veggies</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$3.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Mixed veggies', '$3.99', 'image/mix_veggies.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 12-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Schoko Snack"
+     data-price="4.50"
+     data-category="snacks"
+     data-rating="3.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Schoko Snack', '$4.50', 'image/schoko_snack.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Schoko Snack', '$4.50', '6.00', 'Delicious chocolate snack for a quick energy boost.', 'image/schoko_snack.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/schoko_snack.jpg" alt="Schoko Snack">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Schoko Snack</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.50</span>
+                <span class="old-price">$6.00</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Schoko Snack', '$4.50', 'image/schoko_snack.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 13-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Chicken (5lbs)"
+     data-price="11.99"
+     data-category="meat"
+     data-rating="4.8">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Chicken (5lbs)', '$11.99', 'image/FrozenOrganicChicken-Whole.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Chicken (5lbs)', '$11.99', '', 'Fresh chicken (5lbs) is a great source of protein and essential nutrients.', 'image/FrozenOrganicChicken-Whole.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/FrozenOrganicChicken-Whole.jpg" alt="Chicken (5lbs)">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Meat & Seafood</small>
+
+            <h5>Whole Chicken (5lbs)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.8)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$11.99</span>
+                <span class="old-price">$13.99</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Whole Chicken (5lbs)', '$11.99', 'image/FrozenOrganicChicken-Whole.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 13-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Chocolate Protein bar(12pcs)"
+     data-price="29.99"
+     data-category="snacks"
+     data-rating="4.2">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Chocolate Protein bar(12pcs)', '$29.99', 'image/protein_bar2.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Chocolate Protein bar(12pcs)', '$29.99', '', 'A delicious and nutritious protein bar to fuel your day.', 'image/protein_bar2.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/protein_bar2.jpg" alt="Protein bar">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Snacks & Sweets</small>
+
+            <h5>Choco-Protein bar(12pcs)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.2)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$29.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Chocolate Protein bar(12pcs)', '$29.99', 'image/protein_bar2.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 14-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Nada Fresh Milk"
+     data-price="4.99"
+     data-category="dairy"
+     data-rating="3.8">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Nada Fresh Milk', '$4.99', 'image/Nada_freshMilk.png')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Nada Fresh Milk', '$4.99', '', 'Nada Fresh Milk is a fresh and creamy milk option for your daily needs.', 'image/Nada_freshMilk.png')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Nada_freshMilk.png" alt="Nada Fresh Milk">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Dairy & Eggs</small>
+
+            <h5>Nada Fresh Milk (1.75L)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.8)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Nada Fresh Milk', '$4.99', 'image/Nada_freshMilk.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 15-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Beauty of Joseon Glow Serum"
+     data-price="13.99"
+     data-category="beauty"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Beauty of Joseon Glow Serum', '$13.99', 'image/BOJ.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Beauty of Joseon Glow Serum', '$13.99', '', 'Beauty of Joseon Glow Serum is a luxurious serum that helps brighten and even out skin tone. It provides deep hydration and helps reduce the appearance of dark spots and fine lines.', 'image/BOJ.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/BOJ.jpg" alt="Beauty of Joseon Glow Serum">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beauty</small>
+
+            <h5>BoJ Glow Serum</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$13.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Beauty of Joseon Glow Serum', '$13.99', 'image/BOJ.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 16-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Lactantia Chocolate Milk"
+     data-price="9.99"
+     data-category="dairy"
+     data-rating="4.0">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Lactantia Chocolate Milk', '$9.99', 'image/Lactantia_ChocoMilk.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Lactantia Chocolate Milk', '$9.99', '', 'Lactantia Chocolate Milk is a delicious and nutritious milk option that provides essential nutrients for a healthy lifestyle.', 'image/Lactantia_ChocoMilk.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Lactantia_ChocoMilk.jpg" alt="Lactantia Chocolate Milk">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Dairy & Eggs</small>
+
+            <h5>Lactantia Chocolate Milk</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$9.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Lactantia Chocolate Milk', '$9.99', 'image/Lactantia_ChocoMilk.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 17-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Cheddar Cheese"
+     data-price="1.99"
+     data-category="dairy">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Cheddar Cheese', '$1.99', 'image/cheddar_cheese.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Cheddar Cheese', '$1.99', '', 'Cheddar Cheese is a delicious and nutritious cheese option that provides essential nutrients for a healthy lifestyle.', 'image/cheddar_cheese.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/cheddar_cheese.jpg" alt="Cheddar Cheese">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Dairy & Eggs</small>
+
+            <h5>Cheddar Cheese</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$1.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Cheddar Cheese', '$1.99', 'image/cheddar_cheese.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 18-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Diced Mozzarella+CheddarCheese"
+     data-price="4.50"
+     data-category="dairy">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Diced Mozzarella+CheddarCheese', '$4.50', 'image/diced_Mozzarella+Cheddar.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Diced Mozzarella+CheddarCheese', '$4.50', '', 'Diced Mozzarella+CheddarCheese is a delicious and nutritious cheese option that provides essential nutrients for a healthy lifestyle.', 'image/diced_Mozzarella+Cheddar.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/diced_Mozzarella+Cheddar.jpg" alt="Diced Mozzarella+CheddarCheese">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Dairy & Eggs</small>
+
+            <h5>Diced Mozzarella+Cheddar</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.50</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Diced Mozzarella+CheddarCheese', '$4.50', 'image/diced_Mozzarella+Cheddar.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 19-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Water"
+     data-price="7.99"
+     data-category="beverage"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Water', '$7.99', 'image/water.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Water', '$7.99', '', 'Water is essential for life and helps maintain proper hydration in the body.', 'image/water.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/water.jpg" alt="Water">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beverage</small>
+
+            <h5>Water (6pcs)</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$7.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Water', '$7.99', 'image/water.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 20-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Aconbury wheatgrass"
+     data-price="2.99"
+     data-category="grain"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Aconbury wheatgrass', '$2.99', 'image/Aconbury_wheatgrass.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Aconbury wheatgrass', '$2.99', '', 'Aconbury wheatgrass is a nutritious addition to your diet, providing essential vitamins and minerals.', 'image/Aconbury_wheatgrass.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Aconbury_wheatgrass.jpg" alt="Aconbury wheatgrass">
+        </div>
+
+        <div class="product-content">
+
+            <small>Grains & Rice</small>
+
+            <h5>Aconbury wheatgrass</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$2.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Aconbury wheatgrass', '$2.99', 'image/Aconbury_wheatgrass.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 21-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Asparagus"
+     data-price="4.99"
+     data-category="freshfood"
+     data-rating="4.0">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Asparagus', '$4.99', 'image/asparagus.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Asparagus', '$4.99', '', 'Asparagus is a nutritious vegetable rich in vitamins and minerals.', 'image/asparagus.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/asparagus.jpg" alt="Asparagus">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Fruit & Vegetables</small>
+
+            <h5>Asparagus</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Asparagus', '$4.99', 'image/asparagus.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 22-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Banana"
+     data-price="1.99"
+     data-category="freshfood"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Banana', '$1.99', 'image/banana.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Banana', '$1.99', '$3.00', 'Banana is a delicious and nutritious fruit that is rich in potassium and vitamin C.', 'image/banana.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/banana.jpg" alt="Banana">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Fruit & Vegetables</small>
+
+            <h5>Banana</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$1.99</span>
+                <span class="old-price">$3.00</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Banana', '$1.99', 'image/banana.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 23-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Bok Choi"
+     data-price="3.99"
+     data-category="freshfood"
+     data-rating="4.2">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Bok Choi', '$3.99', 'image/bokchoi.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Bok Choi', '$3.99', '$5.00', 'Bok Choi is a nutritious vegetable that is rich in vitamins and minerals.', 'image/bokchoi.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/bokchoi.jpg" alt="Bok Choi">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Fruit & Vegetables</small>
+
+            <h5>Bok Choi</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.2)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$3.99</span>
+                <span class="old-price">$5.00</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Bok Choi', '$3.99', 'image/bokchoi.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 24-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Starbuck Strawberry Acai"
+     data-price="8.99"
+     data-category="beverage"
+     data-rating="5.0">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Starbuck Strawberry Acai', '$8.99', 'image/starbuck_strawberry_acai.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Starbuck Strawberry Acai', '$8.99', '$10.00', 'Starbuck Strawberry Acai is a delicious and refreshing beverage that combines the sweetness of strawberries with the boldness of coffee.', 'image/starbuck_strawberry_acai.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/starbuck_strawberry_acai.jpg" alt="Starbuck Strawberry Acai">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beverages</small>
+
+            <h5>Starbuck Strawberry Acai</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(5.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$8.99</span>
+                <span class="old-price">$10.00</span>
+            </div>
+            <button class="btn btn-success w-100" onclick="addToCart('Starbuck Strawberry Acai', '$8.99', 'image/starbuck_strawberry_acai.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 25-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Carrot"
+     data-price="1.99"
+     data-category="freshfood"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Carrot', '$1.99', 'image/Carrot.png')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Carrot', '$1.99', '$2.99', 'Carrot is a root vegetable that is rich in beta-carotene and other essential nutrients.', 'image/Carrot.png')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Carrot.png" alt="Carrot">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Fruit & Vegetables</small>
+
+            <h5>Carrot</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$1.99</span>
+                <span class="old-price">$2.99</span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Carrot', '$1.99', 'image/Carrot.png')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 26-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Polar Club Soda"
+     data-price="2.50"
+     data-category="beverage"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Polar Club Soda', '$2.50', 'image/Polar_club_soda.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Polar Club Soda', '$2.50', '', 'Polar Club Soda is a refreshing carbonated drink that is perfect for quenching your thirst.', 'image/Polar_club_soda.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Polar_club_soda.jpg" alt="Polar Club Soda">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beverages</small>
+
+            <h5>Polar Club Soda</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$2.50</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Polar Club Soda', '$2.50', 'image/Polar_club_soda.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 27-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Kael"
+     data-price="1.99"
+     data-category="freshfood"
+     data-rating="3.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Kael', '$1.99', 'image/Kael.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Kael', '$1.99', '', 'Kael is a fresh and delicious fruit that is perfect for snacking.', 'image/Kael.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/Kael.jpg" alt="Kael">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>freshfood</small>
+
+            <h5>Kael</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$1.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Kael', '$1.99', 'image/Kael.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 28-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Coca-Cola"
+     data-price="10.99"
+     data-category="beverage"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Coca-Cola', '$10.99', 'image/coca_cola.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Coca-Cola', '$10.99', '', 'Coca-Cola is a refreshing carbonated soft drink that is perfect for any occasion.', 'image/coca_cola.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/coca_cola.jpg" alt="Coca-Cola">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Beverage</small>
+
+            <h5>Coca-Cola</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$10.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Coca-Cola', '$10.99', 'image/coca_cola.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 29-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Kitchen Cleaner"
+     data-price="2.99"
+     data-category="household"
+     data-rating="3.5">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Kitchen Cleaner', '$2.99', 'image/kitchen_cleaner.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Kitchen Cleaner', '$2.99', '', 'Kitchen Cleaner is a powerful cleaning solution that effectively removes grease and grime from kitchen surfaces.', 'image/kitchen_cleaner.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/kitchen_cleaner.jpg" alt="Kitchen Cleaner">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Household Essentials</small>
+
+            <h5>Kitchen Cleaner</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(3.5)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$2.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Kitchen Cleaner', '$2.99', 'image/kitchen_cleaner.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 30-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Mango"
+     data-price="4.99"
+     data-category="freshfood"
+     data-rating="4.7">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Mango', '$4.99', 'image/mango.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Mango', '$4.99', '', 'Mango is a sweet and juicy tropical fruit that is perfect for snacking or blending into smoothies.', 'image/mango.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/mango.jpg" alt="Mango">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>freshfood</small>
+
+            <h5>Mango</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.7)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$4.99</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Mango', '$4.99', 'image/mango.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+<!--product 31-->
+<div class="col-lg-3 col-md-6 product-item"
+     data-name="Tide clean breeze"
+     data-price="7.49"
+     data-category="household"
+     data-rating="4.0">
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <!-- Wishlist -->
+            <button class="wishlist-btn" onclick="toggleWishlist(this, 'Tide clean breeze', '$7.49', 'image/tide_clean_breeze.jpg')">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <!-- View Detail -->
+            <button class="view-btn"
+        onclick="showProduct('Tide clean breeze', '$7.49', '', 'Tide clean breeze is a powerful laundry detergent that removes tough stains and leaves clothes fresh and clean.', 'image/tide_clean_breeze.jpg')"
+        data-bs-toggle="modal"
+        data-bs-target="#quickViewModal">
+    <i class="fa-solid fa-eye"></i>
+</button>
+            <img src="image/tide_clean_breeze.jpg" alt="Tide clean breeze">
+
+        </div>
+
+        <div class="product-content">
+
+            <small>Household Essentials</small>
+
+            <h5>Tide clean breeze</h5>
+
+            <div class="rating">
+                ★★★★★ <span>(4.0)</span>
+            </div>
+
+            <div class="price">
+                <span class="new-price">$7.49</span>
+                <span class="old-price"></span>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="addToCart('Tide clean breeze', '$7.49', 'image/tide_clean_breeze.jpg')">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+    
+
+    <!--footer-->
+    <footer class="footer">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- About -->
+            <div class="col-lg-3 col-md-6 mb-4" id="footer-about">
+                <h5>About MetroMall</h5>
+
+                <p>
+                    Your trusted online supermarket offering
+                    fresh groceries, electronics, and household
+                    essentials delivered to your doorstep.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Quick Links</h5>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#footer-about">About Us</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Customer Service</h5>
+
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Contact Us</h5>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    123 Commerce Street, Metro City
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +1 (555) 123-4567
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    support@metromall.com
+                </p>
+
+                <h6 class="mt-4">Newsletter</h6>
+
+                <div class="input-group">
+                    <input type="email"
+                           class="form-control"
+                           placeholder="Your email">
+
+                    <button class="btn btn-success">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 MetroMall. All rights reserved.
+            </p>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Product Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid rounded mb-3" alt="Product Image" style="max-height: 250px; object-fit: contain;">
+
+                <div class="price mb-2">
+                    <span id="modalNewPrice" class="new-price text-success fw-bold fs-5"></span>
+                    <span id="modalOldPrice" class="old-price text-muted text-decoration-line-through ms-2"></span>
+                </div>
+
+                <p id="modalDescription" class="text-muted"></p>
+
+                <button class="btn btn-success w-100 mt-3" onclick="addToCart(document.getElementById('modalTitle').textContent, document.getElementById('modalNewPrice').textContent, document.getElementById('modalImage').src)">
+                    <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+  
